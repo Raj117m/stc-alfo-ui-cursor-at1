@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cognitive Experience Prototype</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="input-panel">
+      <h1>STC Cognitive Flow Engine</h1>
+      <p class="subtitle">Paste structured intelligence JSON. The system transforms it into a controlled attention sequence.</p>
+      <textarea id="jsonInput" spellcheck="false" aria-label="STC JSON input"></textarea>
+      <div class="controls">
+        <button id="runBtn">Render Experience</button>
+        <button id="sampleBtn" class="secondary">Load Sample</button>
+      </div>
+      <p id="errorText" class="error" role="alert" aria-live="polite"></p>
+    </section>
+
+    <section id="experience" class="experience" aria-live="polite">
+      <div id="silenceLayer" class="silence-layer hidden"></div>
+
+      <article id="hookLayer" class="layer hidden">
+        <p class="layer-label">Pattern Interrupt</p>
+        <h2 id="hookStatement" class="hook-text"></h2>
+      </article>
+
+      <article id="insightLayer" class="layer hidden">
+        <p class="layer-label">Clarity Bursts</p>
+        <div id="insightList" class="burst-list"></div>
+      </article>
+
+      <article id="opportunityLayer" class="layer hidden tone-profit">
+        <p class="layer-label">Opportunity Layer</p>
+        <div id="opportunityList" class="signal-list"></div>
+      </article>
+
+      <article id="actionsLayer" class="layer hidden">
+        <p class="layer-label">Action Compression</p>
+        <div id="actionsList" class="action-list"></div>
+      </article>
+
+      <article id="dominanceLayer" class="layer hidden dominance">
+        <p class="layer-label">Dominance Contrast</p>
+        <div class="dominance-grid">
+          <section>
+            <h3>Where Others Fail</h3>
+            <ul id="othersFailList"></ul>
+          </section>
+          <section>
+            <h3>Your Advantage</h3>
+            <ul id="yourAdvantageList"></ul>
+          </section>
+        </div>
+        <p id="confidenceSummary" class="confidence"></p>
+      </article>
+
+      <details id="detailsLayer" class="layer hidden details">
+        <summary>Open Full Structured Report</summary>
+        <pre id="fullReport"></pre>
+      </details>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
